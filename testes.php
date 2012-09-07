@@ -57,6 +57,24 @@ class Testes {
     }, func_get_args());
   }  
 
+  function assert_not_null($actual) {
+    $this->assert(function($actual) {
+      if (is_null($actual)) {
+        $actual_type = gettype($actual);
+        TestesException::new_exception("$actual {$actual_type} is null");
+      }
+    }, func_get_args());
+  }
+
+  function assert_null($actual) {
+    $this->assert(function($actual) {
+      if (!(is_null($actual))) {
+        $actual_type = gettype($actual);
+        TestesException::new_exception("$actual {$actual_type} is not null");
+      }
+    }, func_get_args());
+  }
+
   function assert_true($actual) {
     $this->assert(function($actual) {
       if ($actual !== true) {

@@ -97,8 +97,8 @@ assert_count($actual, $count) | $actual (array/object) has a count of $expected 
 assert_equals($actual, $expected) | $actual equals $expected | Yes
 assert_false($actual) | $actual is false (requires boolean type) | Yes
 assert_instance_of($actual, $string_or_object) | $actual is an instance of $string_or_object | Yes
-assert_not_null($actual) | $actual is not null | -
-assert_null($actual) | $actual is null | -
+assert_not_null($actual) | $actual is not null | Yes
+assert_null($actual) | $actual is null | Yes
 assert_string_contains($string, $expected) | $string contains $expected (case-sensitive) | -
 assert_string_ends_with($string, $expected) | $string ends with $expected (case-sensitive) | -
 assert_string_matches($string, $regex) | $string matches $regex | -
