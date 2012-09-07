@@ -96,7 +96,7 @@ Function     | Pseudo-English | Currently Supported
 assert_count($actual, $count) | $actual (array/object) has a count of $expected | Yes
 assert_equals($actual, $expected) | $actual equals $expected | Yes
 assert_false($actual) | $actual is false (requires boolean type) | Yes
-assert_instance_of($actual, $string_or_object) | $actual is an instance of $string_or_object | -
+assert_instance_of($actual, $string_or_object) | $actual is an instance of $string_or_object | Yes
 assert_not_null($actual) | $actual is not null | -
 assert_null($actual) | $actual is null | -
 assert_string_contains($string, $expected) | $string contains $expected (case-sensitive) | -

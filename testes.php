@@ -48,6 +48,15 @@ class Testes {
     }, func_get_args());
   }
 
+  function assert_instance_of($actual, $string_or_object) {
+    $this->assert(function($actual, $string_or_object) {
+      if (!($actual instanceof $string_or_object)) {
+        $actual_type = gettype($actual);
+        TestesException::new_exception("<{$string_or_object}> type expected but was {$actual_type}");
+      }
+    }, func_get_args());
+  }  
+
   function assert_true($actual) {
     $this->assert(function($actual) {
       if ($actual !== true) {
