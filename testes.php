@@ -61,7 +61,7 @@ class Testes {
     $this->assert(function($actual) {
       if (is_null($actual)) {
         $actual_type = gettype($actual);
-        TestesException::new_exception("$actual {$actual_type} is null");
+        TestesException::new_exception("<$actual> {$actual_type} is null");
       }
     }, func_get_args());
   }
@@ -70,7 +70,15 @@ class Testes {
     $this->assert(function($actual) {
       if (!(is_null($actual))) {
         $actual_type = gettype($actual);
-        TestesException::new_exception("$actual {$actual_type} is not null");
+        TestesException::new_exception("<$actual> {$actual_type} is not null");
+      }
+    }, func_get_args());
+  }
+
+  function assert_string_contains($string, $expected) {
+    $this->assert(function($actual) {
+      if (strpos($string, $expected) === false) {
+        TestesException::new_exception("<$string> does not contain $expected");
       }
     }, func_get_args());
   }
