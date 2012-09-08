@@ -83,6 +83,30 @@ class Testes {
     }, func_get_args());
   }
 
+  function assert_string_ends_with($string, $expected) {
+    $this->assert(function($string, $expected) {
+      if ((strlen($expected) != 0) && (substr($string, -strlen($expected)) !== $expected)) {
+        TestesException::new_exception("<$string> does not end with: $expected");
+      }
+    }, func_get_args());
+  }
+
+  function assert_string_matches($string, $regex) {
+    $this->assert(function($string, $regex) {
+      if (!preg_match($regex, $string)) {
+        TestesException::new_exception("<$string> does not match expression: $regex");
+      }
+    }, func_get_args());
+  }
+
+  function assert_string_starts_with($string, $expected) {
+    $this->assert(function($string, $expected) {
+      if (substr($string, 0, strlen($expected)) !== $expected) {
+        TestesException::new_exception("<$string> does not start with $actual");
+      }
+    }, func_get_args());
+  }
+
   function assert_true($actual) {
     $this->assert(function($actual) {
       if ($actual !== true) {

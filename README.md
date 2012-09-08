@@ -6,7 +6,7 @@
 
 ## Features
 
-- A dozen built-in assertions 
+- Around a dozen built-in assertions 
 - Support for `before` and `after` methods (setup and cleanup)
 - Single file dependency (`testes.php`)
 - Tested with PHP 5.3 and above
@@ -91,20 +91,19 @@ The pair provides convenient functionality:
 
 **Testes** includes the following assertions: 
 
-Function     | Pseudo-English | Currently Supported
------------- | -------------- | -------------------
-assert_count($actual, $count) | $actual (array/object) has a count of $expected | Yes
-assert_equals($actual, $expected) | $actual equals $expected | Yes
-assert_false($actual) | $actual is false (requires boolean type) | Yes
-assert_instance_of($actual, $string_or_object) | $actual is an instance of $string_or_object | Yes
-assert_not_null($actual) | $actual is not null | Yes
-assert_null($actual) | $actual is null | Yes
-assert_string_contains($string, $expected) | $string contains $expected (case-sensitive) | Yes
-assert_string_ends_with($string, $expected) | $string ends with $expected (case-sensitive) | -
-assert_string_matches($string, $regex) | $string matches $regex | -
-assert_string_starts_with($string, $expected) | $string starts with $expected (case-sensitive) | -
-assert_type($actual, $string) | $actual is of type $string | -
-assert_true($actual) | $actual is true | Yes
+Function     | Pseudo-English 
+------------ | -------------- 
+assert_count($actual, $count) | $actual (array/object) has a count of $expected
+assert_equals($actual, $expected) | $actual equals $expected
+assert_false($actual) | $actual is false (requires boolean type)
+assert_instance_of($actual, $string_or_object) | $actual is an instance of $string_or_object
+assert_not_null($actual) | $actual is not null
+assert_null($actual) | $actual is null
+assert_string_contains($string, $expected) | $string contains $expected (case-sensitive)
+assert_string_ends_with($string, $expected) | $string ends with $expected (case-sensitive)
+assert_string_matches($string, $regex) | $string matches $regex
+assert_string_starts_with($string, $expected) | $string starts with $expected (case-sensitive)
+assert_true($actual) | $actual is true
 
 
 ## Installation
